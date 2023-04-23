@@ -10,7 +10,10 @@
   <body>
     <main>
       <form>
-        <input id="taskInput" type="text" />
+        <div class="input--container">
+          <input id="taskInput" class="task--input" type="text" />
+          <input type="date" placeholder="" class="date--input" />
+        </div>
         <div class="button--container">
           <button class="button--filters">Filters</button>
           <button id="addTaskButton">Add Task</button>
