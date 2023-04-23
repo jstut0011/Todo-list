@@ -9,12 +9,15 @@
   </head>
   <body>
     <main>
-      <input type="text" />
-      <div class="button--container">
-        <button class="button--filters">Filters</button>
-        <button>Add Task</button>
-      </div>
-      <script src="app.js"></script>
+      <form>
+        <input id="taskInput" type="text" />
+        <div class="button--container">
+          <button class="button--filters">Filters</button>
+          <button id="addTaskButton">Add Task</button>
+        </div>
+      </form>
+      <ul id="taskList" class="task--list"></ul>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
