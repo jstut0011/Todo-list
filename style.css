@@ -1,6 +1,8 @@
 :root {
   --main-gray-color: #d9d9d9;
   --font-color: white;
+  --checkbox-color: #a9ffac;
+  --form-color: #f9f9f9;
 }
 
 body {
@@ -66,10 +68,67 @@ input:focus {
   outline: none;
 }
 
-.taskItem {
-  background-color: var(--main-gray-color);
-  padding: 8px;
-  margin-bottom: 2px;
-  color: var(--font-color);
+.task--list {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.task--container {
+  display: flex;
+  align-items: center;
   list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  width: 509px;
+  color: var(--font-color);
+  margin-top: 4px;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--checkbox-color);
+  border-radius: 50%;
+  margin-right: 13px;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.task--list {
+  background-color: var(--form-color);
+  width: 511px;
+  min-height: 174px;
+  border-radius: 5px;
+}
+
+.task--item {
+  background-color: var(--main-gray-color);
+  font-size: 12px;
+  width: 392px;
+  padding: 6px;
+  text-transform: uppercase;
+  margin-right: 13px;
+  text-align: center;
+}
+
+.delete--button {
+  border: 1px solid #ffd3d3;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 13px;
+}
+
+.edit--button {
+  background-color: var(--main-gray-color);
+  width: 23px;
+  height: 12px;
+  border-radius: 4px;
+  font-size: 8px;
+  margin-right: 13px;
+  display: flex;
+  justify-content: center;
 }

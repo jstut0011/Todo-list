@@ -14,10 +14,27 @@ const addTask = () => {
   let taskList = document.getElementById('taskList');
   taskList.innerHTML = '';
   for (let i = 0; i < tasks.length; i++) {
+    let taskContainer = document.createElement('div');
+    taskContainer.classList.add('task--container');
+    let addCheckbox = document.createElement('input');
+    addCheckbox.type = 'checkbox';
+    addCheckbox.setAttribute('id', 'taskCheckbox');
+    addCheckbox.classList.add('task--checkbox');
     let taskItem = document.createElement('li');
-    taskItem.classList.add('taskItem');
+    taskItem.classList.add('task--item');
     taskItem.innerText = tasks[i];
-    taskList.appendChild(taskItem);
+    let deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete--button');
+    let editButton = document.createElement('button');
+    editButton.innerHTML = 'edit';
+    editButton.classList.add('edit--button');
+
+    //Add child to parents
+    taskList.appendChild(taskContainer);
+    taskContainer.appendChild(addCheckbox);
+    taskContainer.appendChild(taskItem);
+    taskContainer.appendChild(deleteButton);
+    taskContainer.appendChild(editButton);
   }
 };
 
