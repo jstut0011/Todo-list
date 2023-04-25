@@ -114,6 +114,9 @@ input[type='checkbox'] {
 }
 
 .delete--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #ffd3d3;
   background-color: white;
   border-radius: 50%;
@@ -131,4 +134,8 @@ input[type='checkbox'] {
   margin-right: 13px;
   display: flex;
   justify-content: center;
+}
+
+.image {
+  transform: scale(0.6);
 }
